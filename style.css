@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+}
+
+section {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a.card {
+  color: white;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+}
+section, header {
+  animation: fadeIn 1.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-img {
+  width: 150px;           /* Adjust size as needed */
+  height: 150px;          /* Height must match width for a circle */
+  border-radius: 50%;     /* This makes it circular */
+  object-fit: cover;      /* This prevents the image from stretching */
+  border: 3px solid #333; /* Adds a nice border */
+  margin: 20px auto;      /* Centers the image */
+  display: block;         /* Ensures margin auto works */
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Slight zoom effect when you hover over the photo */
+.profile-img:hover {
+  transform: scale(1.05);
+  border-color: #ffffff;
+}
