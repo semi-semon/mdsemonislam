@@ -13,6 +13,11 @@ const posts = [
     excerpt: "নীরবতা, একাকীত্ব, আর বিদায়ের অনুভূতি।",
     link: "post2.html"
   }
+  {
+    title:"Selective Sinners",
+    excerpt: "Selective Sinners, Judge",
+      link: "post3.html"
+  }
 ];
 
 // ===============================
